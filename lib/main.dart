@@ -17,15 +17,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          // we will give media query height
-          // double.infinity make it big as my parent allows
-          // while MediaQuery make it big as per the screen
-
-          width: double.infinity,
+            width: double.infinity,
           height: MediaQuery.of(context).size.height,
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
           child: Column(
-            // even space distribution
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -56,14 +51,14 @@ class HomePage extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 3,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/100344_accounts_user_icon.png.png")
+                    image: AssetImage("assets/images/100344_accounts_user_icon.png")
                   )
                 ),
               ),
 
               Column(
                 children: <Widget>[
-                  //  login button
+                 
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
@@ -71,7 +66,7 @@ class HomePage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => login()));
 
                     },
-                    // defining the shape
+                    
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: Colors.black
@@ -86,7 +81,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // creating the signup button
+                  
                   SizedBox(height:20),
                   MaterialButton(
                     minWidth: double.infinity,
